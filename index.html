@@ -188,7 +188,7 @@ function findEncyclopediaAnswer(query){
  if(!scored.length)return null;
  const unique=[]; for(const hit of scored){if(!unique.some(x=>x.item.text===hit.item.text))unique.push(hit);}
  const snippets=unique.slice(0,2).map(x=>x.item.text).map(t=>t.length>690?t.slice(0,687).replace(/\s+\S*$/,'')+'…':t);
- return 'Let’s look at the field notes that match what you asked.\n\n'+snippets.join('\n\n')+'\n\nUse this as a starting point, not a confirmed diagnosis or a universal prescription. Local conditions and qualified agricultural advice matter.';
+ return 'Let me check my memories.\n\n'+snippets.join('\n\n')+'\n\nLocal conditions and expert advice matters.';
 }
 function answer(q){
  const s=q.trim().toLowerCase();
